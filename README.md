@@ -115,7 +115,6 @@ drosera dryrun
 ## 1. Whitelist Your Operator
 **1- Edit Trap configuration:**
 ```bash
-cd my-drosera-trap
 nano drosera.toml
 ```
 Add the following codes at the bottom of `drosera.toml`:
