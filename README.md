@@ -159,16 +159,9 @@ sudo cp drosera-operator /usr/bin
 # Check if it is working
 drosera-operator
 ```
-
-## 3. Install Docker image
-```
-# Optional: we don't install using docker
-docker pull ghcr.io/drosera-network/drosera-operator:latest
-```
-
 ---
 
-## 4. Register Operator
+## 3. Register Operator
 ```bash
 drosera-operator register --eth-rpc-url https://ethereum-holesky-rpc.publicnode.com --eth-private-key PV_KEY
 ```
@@ -176,7 +169,7 @@ drosera-operator register --eth-rpc-url https://ethereum-holesky-rpc.publicnode.
 
 ---
 
-## 5. Create Operator systemd
+## 4. Create Operator systemd
 Enter this command in the terminal, But first replace:
 * `PV_KEY` with your `privatekey`
 * `VPS_IP` with your solid vps IP (without anything else)
@@ -208,7 +201,7 @@ EOF
 
 ---
 
-## 6. Open Ports
+## 5. Open Ports
 ```bash
 # Enable firewall
 sudo ufw allow ssh
@@ -222,7 +215,7 @@ sudo ufw allow 31314/tcp
 
 ---
 
-## 7. Run Operator
+## 6. Run Operator
 ```console
 # reload systemd
 sudo systemctl daemon-reload
@@ -234,7 +227,7 @@ sudo systemctl start drosera
 
 ---
 
-## 8. Check Node Health
+## 7. Check Node Health
 ```
 journalctl -u drosera.service -f
 ```
@@ -256,14 +249,14 @@ sudo systemctl restart drosera
 
 ---
 
-## 9. Opt-in Trap
+## 8. Opt-in Trap
 In the dashboard., Click on `Opti in` to connect your operator to the Trap
 
 ![image](https://github.com/user-attachments/assets/5189b5cb-cb46-4d10-938a-33f71951dfc2)
 
 ---
 
-## 10. Check Node Liveness
+## 9. Check Node Liveness
 Your node will start producing greeen blocks in the dashboard
 
 ![image](https://github.com/user-attachments/assets/9ad08265-0ea4-49f7-85e5-316677245254)
